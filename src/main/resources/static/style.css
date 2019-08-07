@@ -1,0 +1,23 @@
+#main {
+    width:300px;
+}
+#main input {
+    float:right;
+    display:inline;
+}
+
+#main textarea {
+    float:right;
+    width:500px !important;
+    align:middle;
+    display:inline;
+}
+#main label {
+    color: #2D2D2D;
+    font-size: 15px;
+}
+#main span {
+    display: table-cell;
+    vertical-align: middle;
+    width:250px;
+}

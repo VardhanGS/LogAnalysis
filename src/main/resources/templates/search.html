@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+
+    <title>Log Monitoring</title>
+</head>
+<body bgcolor="#E6E6FA">
+<form action="#" th:action="@{/search}" th:object="${search}" method="post">
+    <p>Location: <input type="text" th:field="*{fileLoc}" /></p>
+    <p>From: <input type="text" th:field="*{firstToSearch}" /></p>
+    <p>To: <input type="text" th:field="*{lastToSearch}" /></p>
+    <p>keyword: <input type="text" th:field="*{keyword}" /></p>
+    <p th:if="*{hidden} == true"><textarea  rows="15" cols="150" th:field="*{result}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+
+</form>
+
+</body>
+</html>
