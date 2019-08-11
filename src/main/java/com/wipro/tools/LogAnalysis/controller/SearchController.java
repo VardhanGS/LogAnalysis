@@ -21,11 +21,12 @@ public class SearchController {
         if (searchStr == null)
             searchStr = new SearchStrings();
         model.addAttribute("search", searchStr);
-        model.addAttribute("dataPointsList", SearchServiceImpl.getCanvasjsDataList());
+
         return "search";
     }
     @PostMapping("/search")
     public String getResults(@ModelAttribute SearchStrings search) {
+        System.out.println("File Loc: "+ search.getFileLoc());
         search.setResult(
                 searchService.searchFile(search.getFileLoc(), search.getLastToSearch(), search.getFirstToSearch(), search.getKeyword()));
         System.out.println(search.toString());

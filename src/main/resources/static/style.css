@@ -1,3 +1,9 @@
+
+#main form  { display: table;      }
+#main p     { display: table-row;  }
+#main label { display: table-cell; }
+#main input { display: table-cell; }
+
 #main {
     width:300px;
 }

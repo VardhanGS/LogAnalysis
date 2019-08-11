@@ -1,17 +1,77 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
 <head>
-
     <title>Log Monitoring</title>
+    <style type="text/css">
+ .tbl_bg {
+ 	background-color:#D7D7D7;
+ 	border:1px solid #898989;
+ }
+ .alt {
+ 	background-color:#EBEBEB;
+ 	}
+ 	.altalt {
+ 	background-color:#EBEBEB;
+ 	border-bottom:1px solid #898989;
+ 	}
+
+ .tbl_bg p {
+ 	font-size:0.8em;
+ 	text-align:left;
+ 	margin:0;
+ 	padding:5px;
+ 	font-family:Arial, Helvetica, sans-serif;
+ 	}
+ .lft_bdr {
+ 		border-left:1px solid #898989;
+ 		}
+ .input {
+ 	width:300px;
+ 	border:1px solid #ACACAC;
+ 	margin:0;
+ 	padding:2px;
+ 	}
+
+
+ </style>
 </head>
 <body bgcolor="#E6E6FA">
 <form action="#" th:action="@{/search}" th:object="${search}" method="post">
-    <p>Location: <input type="text" th:field="*{fileLoc}" /></p>
+    <table width="500" border="0" cellspacing="0" cellpadding="0" class="tbl_bg">
+        <tr>
+            <td width="150" valign="top"><p>File</p></td>
+            <td width="350" valign="top" class="lft_bdr"><p>
+                <input name="textfield" type="text" class="input" th:field="*{fileLoc}" >
+            </p></td>
+        </tr>
+        <tr>
+            <td width="150" valign="top"><p>From</p></td>
+            <td width="350" valign="top" class="lft_bdr"><p>
+                <input name="textfield" type="text" class="input" th:field="*{firstToSearch}">
+            </p></td>
+        </tr>
+        <tr>
+            <td valign="top" class="alt"><p>To</p></td>
+            <td valign="top" class="alt lft_bdr"><p>
+                <input name="textfield" type="text" class="input" th:field="*{lastToSearch}">
+            </p></td>
+        </tr>
+        <tr>
+            <td valign="top" class="alt"><p>Keyword</p></td>
+            <td valign="top" class="alt lft_bdr"><p>
+                <input name="textfield" type="text" class="input" th:field="*{keyword}">
+            </p></td>
+        </tr>
+
+    </table>
+    <p th:if="*{hidden} == true"><textarea  rows="15" cols="150" th:field="*{result}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+  <!--  <p>Location: <input type="text" th:field="*{fileLoc}" /></p>
     <p>From: <input type="text" th:field="*{firstToSearch}" /></p>
     <p>To: <input type="text" th:field="*{lastToSearch}" /></p>
     <p>keyword: <input type="text" th:field="*{keyword}" /></p>
     <p th:if="*{hidden} == true"><textarea  rows="15" cols="150" th:field="*{result}" /></p>
-    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>-->
 
 </form>
 
