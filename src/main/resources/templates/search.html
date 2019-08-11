@@ -39,26 +39,26 @@
 <form action="#" th:action="@{/search}" th:object="${search}" method="post">
     <table width="500" border="0" cellspacing="0" cellpadding="0" class="tbl_bg">
         <tr>
-            <td width="150" valign="top"><p>File</p></td>
+            <td width="150" valign="top" class="alt"><p>File</p></td>
             <td width="350" valign="top" class="lft_bdr"><p>
                 <input name="textfield" type="text" class="input" th:field="*{fileLoc}" >
             </p></td>
         </tr>
         <tr>
-            <td width="150" valign="top"><p>From</p></td>
+            <td width="150" valign="top" class="alt"><p>From</p></td>
             <td width="350" valign="top" class="lft_bdr"><p>
                 <input name="textfield" type="text" class="input" th:field="*{firstToSearch}">
             </p></td>
         </tr>
         <tr>
             <td valign="top" class="alt"><p>To</p></td>
-            <td valign="top" class="alt lft_bdr"><p>
+            <td valign="top" class="lft_bdr"><p>
                 <input name="textfield" type="text" class="input" th:field="*{lastToSearch}">
             </p></td>
         </tr>
         <tr>
             <td valign="top" class="alt"><p>Keyword</p></td>
-            <td valign="top" class="alt lft_bdr"><p>
+            <td valign="top" class="lft_bdr"><p>
                 <input name="textfield" type="text" class="input" th:field="*{keyword}">
             </p></td>
         </tr>
